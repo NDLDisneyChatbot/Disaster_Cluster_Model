@@ -5,7 +5,7 @@ names = pd.read_csv("baby-names.csv")
 
 data = []
 for name in names.name[100:300]:
-    x, y = uniform(-(77.8599 + 10), (77.8599 + 10)), uniform(-(40.7982 + 10), (40.7982 + 10))
+    x, y = uniform((38.44 - 1), (48.44 + 1)), uniform((-100.295 - 1), (-100.295 + 1))
     phone_number = 0
     for i in range(10):
         phone_number += (10 ** i) * int(random.uniform(0, 10))
