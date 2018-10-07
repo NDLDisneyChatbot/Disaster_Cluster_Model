@@ -16,5 +16,19 @@ def getCluster(data):
 
     centers = centers[::-1]
     return centers
+
+def buildList(st):
+    st = st[1:-1]
+    fi = 0
+    ans = list()
+    for i,e in enumerate(st):
+        if e == '[':
+            fi = i
+        elif e == ']':
+            ans.append(list(map(float, st[fi+1:i].split(','))))
+    print("ans:",ans)
+    return ans
+
 if __name__ == '__main__':
     getCluster(argv[1])
+    buildList(argv[1])
